@@ -9,7 +9,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $messages = ContactMessage::latest()->paginate(10);
+        $messages = ContactMessage::latest()->get();
         return view('contact.index', compact('messages'));
     }
 
